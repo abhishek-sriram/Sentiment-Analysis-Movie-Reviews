@@ -1,4 +1,4 @@
-# Movie Reviews Sentiment Analysis
+# Sentiment Analysis - Movie Reviews
 
 ## Project Overview
 This project aims to analyze movie reviews and classify them as **positive** or **negative** using Natural Language Processing (NLP) techniques. The dataset used for this project consists of movie reviews from IMDB, which are labeled with sentiment (either positive or negative). The model is trained using various machine learning classifiers, and the best performing model is saved for future predictions.
