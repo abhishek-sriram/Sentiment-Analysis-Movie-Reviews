@@ -19,40 +19,9 @@ The project utilizes the **IMDB Dataset**, comprising 50,000 movie reviews, each
    - **Bag of Words (BOW)**: Converts text data into a numerical matrix representing word frequencies, enabling machine learning algorithms to process the data.
 
 3. **Model Building**:
-   - Utilizes multiple **Naive Bayes classifiers**, including:
-     - **Gaussian Naive Bayes**
-     - **Multinomial Naive Bayes**
-     - **Bernoulli Naive Bayes**
-   - Models are trained on the dataset, and their performance is evaluated using accuracy scores.
+     - Built an **Long Short Term Memory** model 
+     - Models are trained on the dataset, and their performance is evaluated using accuracy scores.
 
 4. **Model Evaluation & Saving**:
    - **Accuracy Comparison**: Models are compared based on their accuracy in classifying sentiments.
    - **Model Saving**: The best-performing model is serialized using the `pickle` module, allowing for easy reuse in future sentiment prediction tasks.
-
-## **Technologies & Libraries Used**
-
-The project leverages several libraries to carry out the sentiment analysis task, including tools for text processing, model building, and evaluation.
-
-```python
-# Core Libraries
-import numpy as np  # For numerical computations and handling arrays
-import pandas as pd  # For data manipulation and analysis
-import re  # Regular expressions for cleaning the text
-
-# Natural Language Processing (NLP)
-from nltk.corpus import stopwords  # To remove common stopwords that are not useful for sentiment classification
-from nltk.tokenize import word_tokenize  # To tokenize the text into individual words
-from nltk.stem import SnowballStemmer  # To reduce words to their base forms through stemming
-
-# Feature Extraction
-from sklearn.feature_extraction.text import CountVectorizer  # Converts the text into a Bag of Words (BOW) model
-
-# Model Building
-from sklearn.model_selection import train_test_split  # To split the dataset into training and testing sets
-from sklearn.naive_bayes import GaussianNB, MultinomialNB, BernoulliNB  # Different variations of Naive Bayes classifiers
-
-# Model Evaluation
-from sklearn.metrics import accuracy_score  # To calculate the accuracy of each model
-
-# Saving the Model
-import pickle  # For serializing and saving the trained model
